@@ -40,16 +40,19 @@ def generate_report():
     groq_client = GroqClient(cache_service)
     response = groq_client.generate('generate_report', user_input, prompt)
 
-    if not response:
-        return jsonify({'error': 'Failed to generate response'}), 500
-
     # Parse JSON response
     try:
         report = json.loads(response)
     except json.JSONDecodeError:
         return jsonify({'error': 'Invalid JSON response from AI'}), 500
 
-    # Validate required fields
+    # Check if fallback response
+    if report.get('is_fallback'):
+        # Return fallback with generated_at
+        report['generated_at'] = datetime.utcnow().isoformat()
+        return jsonify(report), 200
+
+    # Validate required fields (only for non-fallback)
     required_fields = ['title', 'summary', 'overview', 'key_items', 'recommendations']
     for field in required_fields:
         if field not in report:

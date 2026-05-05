@@ -39,10 +39,7 @@ def describe():
     groq_client = GroqClient(cache_service)
     response = groq_client.generate('describe', user_input, prompt)
     
-    if not response:
-        return jsonify({'error': 'Failed to generate response'}), 500
-    
-    # Parse JSON response
+    # Parse JSON response (fallback always returns valid JSON with is_fallback flag)
     try:
         result = json.loads(response)
     except json.JSONDecodeError:
@@ -51,4 +48,5 @@ def describe():
     # Add generated_at timestamp
     result['generated_at'] = datetime.utcnow().isoformat()
     
+    # Return 200 OK even for fallback responses (client checks is_fallback flag)
     return jsonify(result), 200

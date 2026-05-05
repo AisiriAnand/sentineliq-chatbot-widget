@@ -40,16 +40,20 @@ def recommend():
     groq_client = GroqClient(cache_service)
     response = groq_client.generate('recommend', user_input, prompt)
 
-    if not response:
-        return jsonify({'error': 'Failed to generate response'}), 500
-
     # Parse JSON response
     try:
-        recommendations = json.loads(response)
+        parsed = json.loads(response)
     except json.JSONDecodeError:
         return jsonify({'error': 'Invalid JSON response from AI'}), 500
 
-    # Validate response structure
+    # Check if fallback response
+    if isinstance(parsed, dict) and parsed.get('is_fallback'):
+        # Return fallback with generated_at
+        parsed['generated_at'] = datetime.utcnow().isoformat()
+        return jsonify(parsed), 200
+
+    # Normal response - validate structure
+    recommendations = parsed
     if not isinstance(recommendations, list) or len(recommendations) != 3:
         return jsonify({'error': 'Invalid response format: expected array of 3 recommendations'}), 500
 
