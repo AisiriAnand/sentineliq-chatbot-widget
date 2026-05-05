@@ -22,6 +22,26 @@ app.register_blueprint(recommend_bp)
 app.register_blueprint(generate_report_bp)
 
 
+@app.after_request
+def add_security_headers(response):
+    """Add security headers to fix OWASP ZAP findings"""
+    # Prevent MIME type sniffing
+    response.headers['X-Content-Type-Options'] = 'nosniff'
+    # Prevent clickjacking
+    response.headers['X-Frame-Options'] = 'DENY'
+    # XSS Protection
+    response.headers['X-XSS-Protection'] = '1; mode=block'
+    # Content Security Policy
+    response.headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';"
+    # Strict Transport Security (HTTPS only)
+    response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
+    # Referrer Policy
+    response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
+    # Permissions Policy
+    response.headers['Permissions-Policy'] = 'geolocation=(), microphone=(), camera=()'
+    return response
+
+
 @app.route('/health', methods=['GET'])
 def health_check():
     cache_service = app.config.get('cache_service')
