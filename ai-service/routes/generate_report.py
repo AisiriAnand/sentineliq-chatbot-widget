@@ -1,4 +1,4 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, current_app
 from datetime import datetime
 import os
 import json
@@ -34,10 +34,11 @@ def generate_report():
     # Replace placeholder
     prompt = prompt_template.replace('{user_input}', user_input)
 
-    # Call Groq
+    # Call Groq with cache
     from services.groq_client import GroqClient
-    groq_client = GroqClient()
-    response = groq_client.generate(prompt)
+    cache_service = current_app.config.get('cache_service')
+    groq_client = GroqClient(cache_service)
+    response = groq_client.generate('generate_report', user_input, prompt)
 
     if not response:
         return jsonify({'error': 'Failed to generate response'}), 500
