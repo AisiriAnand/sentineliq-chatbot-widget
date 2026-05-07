@@ -10,6 +10,7 @@ Flask microservice providing AI-powered text analysis using Groq API (Llama 3.3 
 - Python 3.11+
 - Redis 7 (for caching)
 - Groq API key
+- 500MB disk space (for sentence-transformers model)
 
 ### Installation
 
@@ -35,6 +36,8 @@ REDIS_URL=redis://localhost:6379/0
 | `AI_PORT` | Service port (default: 5000) | No |
 | `FLASK_DEBUG` | Debug mode (default: false) | No |
 | `REDIS_URL` | Redis connection URL | No |
+| `EMBEDDING_MODEL` | Sentence-transformers model (default: all-MiniLM-L6-v2) | No |
+| `ALLOWED_ORIGIN` | CORS allowed origin (default: *) | No |
 
 ---
 
@@ -185,8 +188,11 @@ curl -X POST http://localhost:5000/generate-report \
 
 ## Features
 
+- **Sentence-Transformers**: Pre-loaded at startup for semantic similarity
 - **Redis Caching**: SHA256 keys, 15min TTL
-- **Security Headers**: X-Content-Type-Options, CSP, HSTS, etc.
+- **Rate Limiting**: 100 req/min, 1000 req/hour per IP
+- **Security Headers**: X-Content-Type-Options, CSP, HSTS, CORS, etc.
+- **Content-Type Validation**: Enforces application/json for POST
 - **Fallback Responses**: Graceful degradation on Groq errors
 - **Response Time Target**: <2s average per endpoint
 - **Input Validation**: Max 1000 chars (2000 for generate-report)
@@ -197,18 +203,19 @@ curl -X POST http://localhost:5000/generate-report \
 
 ```
 ai-service/
-├── app.py              # Flask app, blueprints, security headers
+├── app.py                  # Flask app, rate limiting, security headers
 ├── routes/
-│   ├── describe.py     # POST /describe endpoint
-│   ├── recommend.py    # POST /recommend endpoint
+│   ├── describe.py         # POST /describe endpoint
+│   ├── recommend.py        # POST /recommend endpoint
 │   └── generate_report.py  # POST /generate-report endpoint
 ├── services/
-│   ├── groq_client.py  # Groq API client with fallback
-│   └── cache_service.py    # Redis caching layer
+│   ├── groq_client.py      # Groq API client with fallback
+│   ├── cache_service.py    # Redis caching layer
+│   └── embedding_service.py    # Sentence-transformers pre-loaded
 └── prompts/
-    ├── describe.txt    # /describe prompt template
-    ├── recommend.txt   # /recommend prompt template
-    └── generate_report.txt   # /generate-report prompt template
+    ├── describe.txt        # /describe prompt template
+    ├── recommend.txt       # /recommend prompt template
+    └── generate_report.txt # /generate-report prompt template
 ```
 
 ---
