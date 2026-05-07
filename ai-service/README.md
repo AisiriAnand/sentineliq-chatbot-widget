@@ -11,6 +11,28 @@ Flask microservice providing AI-powered text analysis using Groq API (Llama 3.3 
 - Redis 7 (for caching)
 - Groq API key
 - 500MB disk space (for sentence-transformers model)
+- 100MB disk space (for ChromaDB)
+
+### Manual Setup Steps (REQUIRED)
+
+After installation, you **MUST** run these manually:
+
+```bash
+# 1. Install dependencies
+pip install -r requirements.txt
+
+# 2. Seed ChromaDB with domain knowledge (10 documents)
+python scripts/seed_chroma.py
+
+# 3. Start the AI service
+python app.py
+
+# 4. In another terminal, run demo tests (30 records)
+python scripts/run_demo.py
+```
+
+**Step 2** creates the vector database with 10 FAQ documents.
+**Step 4** generates `demo_outputs.json` with results for all 30 test records.
 
 ### Installation
 
