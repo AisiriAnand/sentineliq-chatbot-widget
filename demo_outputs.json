@@ -1,0 +1,2160 @@
+{
+  "metadata": {
+    "total_records": 30,
+    "endpoints_tested": [
+      "describe",
+      "recommend",
+      "generate_report"
+    ],
+    "base_url": "http://localhost:5000"
+  },
+  "summary": {
+    "describe": {
+      "success": 30,
+      "failed": 0,
+      "fallback": 0
+    },
+    "recommend": {
+      "success": 30,
+      "failed": 0,
+      "fallback": 0
+    },
+    "generate-report": {
+      "success": 30,
+      "failed": 0,
+      "fallback": 0
+    }
+  },
+  "records": [
+    {
+      "record_id": 1,
+      "user_input": "I forgot my password and can't log in to my account",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3266.23,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User is unable to log in due to a forgotten password",
+            "generated_at": "2026-05-07T10:13:52.121631",
+            "intent": "technical_support",
+            "priority": "high",
+            "sentiment": "neutral",
+            "suggested_action": "Direct the user to the password recovery process to regain access to their account"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3105.17,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:13:55.328120",
+            "recommendations": [
+              {
+                "action_type": "troubleshoot",
+                "description": "Reset password via email",
+                "priority": "high"
+              },
+              {
+                "action_type": "educate",
+                "description": "Check password requirements",
+                "priority": "medium"
+              },
+              {
+                "action_type": "escalate",
+                "description": "Contact support team",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3451.31,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:13:58.881408",
+            "key_items": [
+              "User has forgotten their account password",
+              "Unable to log in to the account",
+              "Requires password recovery assistance"
+            ],
+            "overview": "The user has encountered an issue with accessing their account due to a forgotten password. This is a common issue that can be resolved through standard password recovery procedures. The user requires guidance on the steps to take to recover their account.",
+            "recommendations": [
+              "Use the password recovery feature on the login page",
+              "Follow the prompts to reset the password via email or security questions",
+              "Contact customer support for additional assistance if needed"
+            ],
+            "summary": "User is unable to log in due to forgotten password. Assistance is required to regain account access. A password recovery process will be outlined.",
+            "title": "Password Recovery Report"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 2,
+      "user_input": "My account got locked after trying wrong password multiple times",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3263.93,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User's account is locked due to multiple incorrect password attempts",
+            "generated_at": "2026-05-07T10:14:02.271670",
+            "intent": "technical_support",
+            "priority": "high",
+            "sentiment": "negative",
+            "suggested_action": "Reset the password or contact support to regain account access"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3161.23,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:14:05.533453",
+            "recommendations": [
+              {
+                "action_type": "troubleshoot",
+                "description": "Reset password via email or SMS",
+                "priority": "high"
+              },
+              {
+                "action_type": "educate",
+                "description": "Use password manager to avoid lockouts",
+                "priority": "medium"
+              },
+              {
+                "action_type": "escalate",
+                "description": "Contact support for account unlock",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3472.99,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:14:09.106765",
+            "key_items": [
+              "Multiple incorrect password attempts triggered the account lockout",
+              "The account lockout is a standard security measure to prevent unauthorized access",
+              "The user is currently unable to access their account"
+            ],
+            "overview": "The account lockout occurred after repeated failed login attempts with an incorrect password. This security measure is in place to protect user accounts from unauthorized access. The user is now unable to access their account and requires support to resolve the issue.",
+            "recommendations": [
+              "Reset the password using the forgot password feature",
+              "Contact customer support for assistance with unlocking the account",
+              "Implement additional security measures, such as two-factor authentication, to prevent future lockouts"
+            ],
+            "summary": "The user's account is locked due to multiple incorrect password attempts. Assistance is required to regain access.",
+            "title": "Account Lockout Report"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 3,
+      "user_input": "How do I reset my password? I forgot it",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3497.23,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User is requesting assistance with resetting their forgotten password",
+            "generated_at": "2026-05-07T10:14:12.705184",
+            "intent": "technical_support",
+            "priority": "medium",
+            "sentiment": "neutral",
+            "suggested_action": "Provide the user with password reset instructions or direct them to the relevant support page"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3071.67,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:14:15.877457",
+            "recommendations": [
+              {
+                "action_type": "troubleshoot",
+                "description": "Click 'Forgot Password' to reset",
+                "priority": "high"
+              },
+              {
+                "action_type": "educate",
+                "description": "Check email for password reset link",
+                "priority": "medium"
+              },
+              {
+                "action_type": "document",
+                "description": "Update password in account settings",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3907.43,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:14:19.887201",
+            "key_items": [
+              "The user has forgotten their current password",
+              "The user requires a password reset to regain account access",
+              "The user will need to verify their identity to complete the reset process"
+            ],
+            "overview": "The user is experiencing difficulty accessing their account due to a forgotten password. This is a common issue that can be resolved through a standard password reset procedure. The user will need to verify their identity and follow the provided instructions to create a new password.",
+            "recommendations": [
+              "Click on the 'Forgot Password' link on the login page to initiate the reset process",
+              "Follow the on-screen instructions to verify identity and create a new password",
+              "Ensure the new password meets the required security standards and is unique to the account"
+            ],
+            "summary": "The user has forgotten their password and requires assistance with the reset process. A step-by-step guide will be provided to help the user regain access to their account.",
+            "title": "Password Reset Assistance"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 4,
+      "user_input": "Can't access my account - says it's suspended",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3055.59,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User is unable to access their account due to a suspension notice",
+            "generated_at": "2026-05-07T10:14:23.043227",
+            "intent": "technical_support",
+            "priority": "high",
+            "sentiment": "negative",
+            "suggested_action": "Request additional information from the user to troubleshoot and resolve the account suspension issue"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3490.71,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:14:26.634483",
+            "recommendations": [
+              {
+                "action_type": "troubleshoot",
+                "description": "Check account status and suspension reason",
+                "priority": "high"
+              },
+              {
+                "action_type": "educate",
+                "description": "Review terms of service and usage policies",
+                "priority": "medium"
+              },
+              {
+                "action_type": "escalate",
+                "description": "Contact support team for account reinstatement",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3575.93,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:14:30.313296",
+            "key_items": [
+              "Account suspension notice",
+              "Unknown cause of suspension",
+              "User requires assistance to resolve the issue"
+            ],
+            "overview": "The user is experiencing an account access issue, with the system indicating that the account has been suspended. The user is seeking help to understand the reason for the suspension and to regain access to their account. The conversation history is currently limited to this initial query.",
+            "recommendations": [
+              "Verify the user's account status and suspension reason",
+              "Check for any outstanding issues or violations of terms of service",
+              "Provide the user with steps to appeal the suspension or resolve the underlying issue"
+            ],
+            "summary": "User is unable to access their account due to a suspension notice. The cause of the suspension is unknown. Assistance is required to resolve the issue.",
+            "title": "Account Access Issue"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 5,
+      "user_input": "Need to unlock my account urgently",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3138.17,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User needs to unlock their account urgently",
+            "generated_at": "2026-05-07T10:14:33.551930",
+            "intent": "technical_support",
+            "priority": "high",
+            "sentiment": "neutral",
+            "suggested_action": "Provide the user with account unlock instructions or direct them to a support resource."
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3217.19,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:14:36.867560",
+            "recommendations": [
+              {
+                "action_type": "escalate",
+                "description": "Contact support for urgent unlock",
+                "priority": "high"
+              },
+              {
+                "action_type": "troubleshoot",
+                "description": "Check login credentials and reset",
+                "priority": "medium"
+              },
+              {
+                "action_type": "educate",
+                "description": "Review account security guidelines",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 4817.31,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:14:41.789237",
+            "key_items": [
+              "Account lockout due to unknown reasons",
+              "Urgent access required to maintain productivity",
+              "Potential security or authentication issues"
+            ],
+            "overview": "The user has encountered an issue with their account, resulting in it being locked. This has prevented them from accessing essential features and services. To resolve the issue, the user requires guidance on the account unlock process and potential causes of the lockout.",
+            "recommendations": [
+              "Verify account credentials and attempt to reset password",
+              "Contact support team for personalized assistance and guidance",
+              "Review account security settings to prevent future lockouts"
+            ],
+            "summary": "User requires urgent account unlock assistance. The account is currently inaccessible, and the user needs help to regain access. Prompt resolution is necessary to minimize disruption.",
+            "title": "Account Unlock Request"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 6,
+      "user_input": "There's a charge of $299 on my card I didn't authorize",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 2980.59,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User reports an unauthorized charge on their card",
+            "generated_at": "2026-05-07T10:14:44.870267",
+            "intent": "complaint",
+            "priority": "high",
+            "sentiment": "negative",
+            "suggested_action": "Investigate the charge and provide assistance to resolve the issue"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3162.3,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:14:48.133901",
+            "recommendations": [
+              {
+                "action_type": "escalate",
+                "description": "Contact card issuer immediately",
+                "priority": "high"
+              },
+              {
+                "action_type": "troubleshoot",
+                "description": "Review recent transactions for similar charges",
+                "priority": "medium"
+              },
+              {
+                "action_type": "document",
+                "description": "Keep a record of the dispute and communication",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3774.94,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:14:52.011443",
+            "key_items": [
+              "Unauthorized charge of $299 detected",
+              "User denies initiating the transaction",
+              "Potential security breach or card compromise"
+            ],
+            "overview": "The user has reported an unauthorized charge of $299 on their card. The charge was not initiated by the user, and they are concerned about the security of their account. The user requires assistance to investigate and resolve the issue promptly.",
+            "recommendations": [
+              "Contact the bank's customer support to report the incident",
+              "Request a transaction reversal and account review",
+              "Consider placing a temporary hold on the card to prevent further unauthorized transactions"
+            ],
+            "summary": "A $299 charge was made without authorization. The user is seeking assistance to resolve the issue. Immediate action is required to prevent further unauthorized transactions.",
+            "title": "Unauthorized Charge Report"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 7,
+      "user_input": "My invoice shows double billing for last month",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3195.46,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User is reporting an issue with their invoice showing double billing for last month",
+            "generated_at": "2026-05-07T10:14:55.307525",
+            "intent": "complaint",
+            "priority": "high",
+            "sentiment": "negative",
+            "suggested_action": "Investigate the invoice discrepancy and contact the user to resolve the double billing issue promptly"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3140.77,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:14:58.549292",
+            "recommendations": [
+              {
+                "action_type": "escalate",
+                "description": "Contact billing support immediately",
+                "priority": "high"
+              },
+              {
+                "action_type": "troubleshoot",
+                "description": "Review invoice for errors",
+                "priority": "medium"
+              },
+              {
+                "action_type": "document",
+                "description": "Save invoice for reference",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3649.7,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:15:02.299929",
+            "key_items": [
+              "Invoice shows duplicate charges for the same period",
+              "Billing error may be due to system glitch or incorrect payment processing",
+              "User's payment history needs to be reviewed for discrepancies"
+            ],
+            "overview": "The user has reported an issue with their invoice, which appears to show duplicate charges for the previous month. This discrepancy may be due to a billing system error or an incorrect payment processing. A thorough examination of the billing records and payment history is necessary to identify the cause and resolve the issue.",
+            "recommendations": [
+              "Verify the billing records to confirm the error and identify the cause",
+              "Review the payment history to ensure all payments are accurately recorded",
+              "Issue a corrected invoice and provide a refund or credit for the overpaid amount"
+            ],
+            "summary": "The user's invoice shows double billing for last month. This error needs to be investigated and corrected. A review of the billing process is required.",
+            "title": "Double Billing Inquiry"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 8,
+      "user_input": "How do I upgrade from free to pro plan?",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3156.48,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User wants to upgrade their plan from free to pro",
+            "generated_at": "2026-05-07T10:15:05.557495",
+            "intent": "technical_support",
+            "priority": "medium",
+            "sentiment": "neutral",
+            "suggested_action": "Provide the user with instructions on how to upgrade their plan through the website or app"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3362.41,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:15:09.022899",
+            "recommendations": [
+              {
+                "action_type": "educate",
+                "description": "Visit pricing page to compare plans",
+                "priority": "high"
+              },
+              {
+                "action_type": "troubleshoot",
+                "description": "Check account for upgrade eligibility",
+                "priority": "medium"
+              },
+              {
+                "action_type": "escalate",
+                "description": "Contact support for upgrade assistance",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3995.93,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:15:13.119195",
+            "key_items": [
+              "The user is currently on a free plan",
+              "The pro plan offers additional features and benefits",
+              "The user must provide payment information to upgrade"
+            ],
+            "overview": "The user is currently on a free plan and wants to access additional features and benefits available in the pro plan. The pro plan offers more storage, advanced features, and priority support. To upgrade, the user must navigate to the account settings and select the pro plan option.",
+            "recommendations": [
+              "Navigate to the account settings to access the plan options",
+              "Select the pro plan and review the features and pricing",
+              "Enter payment information to complete the upgrade process"
+            ],
+            "summary": "The user is seeking to upgrade from a free plan to a pro plan. This requires reviewing the available plans and selecting the pro plan. The user will need to provide payment information to complete the upgrade.",
+            "title": "Upgrade to Pro Plan"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 9,
+      "user_input": "I want to cancel my subscription and get refund",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3031.57,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User wants to cancel subscription and receive a refund",
+            "generated_at": "2026-05-07T10:15:16.253027",
+            "intent": "complaint",
+            "priority": "high",
+            "sentiment": "negative",
+            "suggested_action": "Guide the user through the cancellation and refund process as per company policy"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3115.76,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:15:19.470145",
+            "recommendations": [
+              {
+                "action_type": "escalate",
+                "description": "Contact support for refund",
+                "priority": "high"
+              },
+              {
+                "action_type": "educate",
+                "description": "Review refund policy details",
+                "priority": "medium"
+              },
+              {
+                "action_type": "document",
+                "description": "Save cancellation confirmation",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 4018.62,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:15:23.588911",
+            "key_items": [
+              "User has requested to cancel their subscription",
+              "Refund has been requested for unused services",
+              "Cancellation process requires verification and confirmation"
+            ],
+            "overview": "The user has initiated a request to cancel their subscription, citing a desire for a refund. The context suggests that the user is seeking to discontinue their subscription and receive a reimbursement for unused services. The request requires attention to ensure a smooth cancellation process and to address any potential issues or concerns.",
+            "recommendations": [
+              "Verify user's subscription status and account information",
+              "Provide clear instructions on the cancellation process and refund policy",
+              "Offer assistance and support to ensure a smooth transition and address any concerns"
+            ],
+            "summary": "User requests to cancel subscription and obtain refund. The user's query indicates a desire to terminate their subscription and receive reimbursement. Further assistance is required to facilitate the cancellation process.",
+            "title": "Subscription Cancellation Request"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 10,
+      "user_input": "Billing dispute - charged twice for same service",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3065.38,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User is disputing a billing charge, claiming to have been charged twice for the same service",
+            "generated_at": "2026-05-07T10:15:26.757185",
+            "intent": "complaint",
+            "priority": "high",
+            "sentiment": "negative",
+            "suggested_action": "Investigate the billing dispute and respond to the user with a resolution or request for additional information to resolve the issue"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3157.39,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:15:30.014550",
+            "recommendations": [
+              {
+                "action_type": "escalate",
+                "description": "Contact billing support immediately",
+                "priority": "high"
+              },
+              {
+                "action_type": "troubleshoot",
+                "description": "Review account transactions for errors",
+                "priority": "medium"
+              },
+              {
+                "action_type": "document",
+                "description": "Record dispute details for reference",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3545.84,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:15:33.663111",
+            "key_items": [
+              "Duplicate charge for the same service",
+              "Incorrect debit from the user's account",
+              "Need for a thorough review of billing history"
+            ],
+            "overview": "The user has encountered a billing dispute due to a duplicate charge for a service they have already paid for. The user's account has been incorrectly debited twice, leading to an overpayment. A detailed examination of the billing records and payment history is required to identify the cause of the error and rectify the situation.",
+            "recommendations": [
+              "Investigate the billing records to identify the cause of the duplicate charge",
+              "Process a refund for the incorrect debit as soon as possible",
+              "Review and update the billing system to prevent similar errors in the future"
+            ],
+            "summary": "User reports being charged twice for the same service, resulting in an unexpected billing discrepancy. The issue requires immediate attention to resolve the duplicate charge. A thorough review of the billing history is necessary.",
+            "title": "Billing Dispute Report"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 11,
+      "user_input": "API keeps returning 500 error when I make requests",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3316.01,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User is experiencing 500 errors when making API requests",
+            "generated_at": "2026-05-07T10:15:37.082116",
+            "intent": "technical_support",
+            "priority": "high",
+            "sentiment": "negative",
+            "suggested_action": "Investigate the API request and server logs to identify the root cause of the 500 error"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3480.47,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:15:40.663689",
+            "recommendations": [
+              {
+                "action_type": "troubleshoot",
+                "description": "Check API request payload and headers",
+                "priority": "high"
+              },
+              {
+                "action_type": "educate",
+                "description": "Review API documentation for error handling",
+                "priority": "medium"
+              },
+              {
+                "action_type": "escalate",
+                "description": "Contact API support team for assistance",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3895.3,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:15:44.660470",
+            "key_items": [
+              "API request payload and headers are correctly formatted",
+              "Server logs show no indication of overload or resource exhaustion",
+              "Recent code changes or deployments may be contributing to the issue"
+            ],
+            "overview": "The API 500 error is a generic error message given when no more specific message is suitable. This error can occur due to various reasons such as server overload, database connection issues, or bugs in the API code. To resolve the issue, it's essential to identify the root cause and take corrective action.",
+            "recommendations": [
+              "Verify API documentation for any recent changes or updates",
+              "Check server logs for detailed error messages and stack traces",
+              "Test API requests with simplified payloads to isolate the issue"
+            ],
+            "summary": "The API is returning a 500 error when requests are made. This indicates a server-side issue. Investigation is needed to resolve the problem.",
+            "title": "API Error 500 Investigation"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 12,
+      "user_input": "Integration failing with rate limit exceeded message",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3175.96,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User's integration is failing due to a rate limit exceeded message",
+            "generated_at": "2026-05-07T10:15:47.937805",
+            "intent": "technical_support",
+            "priority": "high",
+            "sentiment": "negative",
+            "suggested_action": "Check the API documentation for rate limit guidelines and adjust the integration accordingly to resolve the issue"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3277.32,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:15:51.315000",
+            "recommendations": [
+              {
+                "action_type": "troubleshoot",
+                "description": "Check API rate limit settings",
+                "priority": "high"
+              },
+              {
+                "action_type": "educate",
+                "description": "Review rate limit best practices",
+                "priority": "medium"
+              },
+              {
+                "action_type": "document",
+                "description": "Log error for future reference",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3690.83,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:15:55.110261",
+            "key_items": [
+              "The rate limit exceeded message is triggered by excessive API requests",
+              "The current integration implementation does not account for rate limiting",
+              "Adjusting the request frequency or implementing rate limiting measures is necessary"
+            ],
+            "overview": "The integration in question relies on API requests to function properly. However, the current implementation exceeds the designated rate limit, resulting in failed integration attempts. Understanding the rate limit and adjusting the request frequency can help mitigate this issue.",
+            "recommendations": [
+              "Implement exponential backoff to reduce the frequency of API requests",
+              "Optimize the integration to reduce the number of requests made to the API",
+              "Consider increasing the rate limit if the current limit is too restrictive for the application's needs"
+            ],
+            "summary": "The integration is failing due to a rate limit exceeded message. This indicates that the number of requests made to the API has exceeded the allowed limit. Review and adjustments are necessary to resolve the issue.",
+            "title": "Integration Rate Limit Exceeded"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 13,
+      "user_input": "Getting error 429 - too many requests",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3015.32,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User is experiencing error 429, indicating excessive requests",
+            "generated_at": "2026-05-07T10:15:58.226325",
+            "intent": "technical_support",
+            "priority": "medium",
+            "sentiment": "negative",
+            "suggested_action": "Investigate and adjust the request rate to resolve the error 429 issue"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3234.75,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:16:01.561599",
+            "recommendations": [
+              {
+                "action_type": "troubleshoot",
+                "description": "Check API request rate limits",
+                "priority": "high"
+              },
+              {
+                "action_type": "educate",
+                "description": "Review API documentation for 429 error",
+                "priority": "medium"
+              },
+              {
+                "action_type": "escalate",
+                "description": "Contact API support for assistance",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3659.81,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:16:05.321873",
+            "key_items": [
+              "Excessive requests are causing the system to return error 429",
+              "Rate limiting may not be properly implemented or configured",
+              "Potential for malicious activity or abuse"
+            ],
+            "overview": "Error 429 is a common issue that arises when a system or API is flooded with requests, exceeding its capacity to handle them. This can be due to various factors such as poor implementation, lack of rate limiting, or malicious activity. Understanding the root cause is crucial to resolving the issue.",
+            "recommendations": [
+              "Implement rate limiting to restrict the number of requests within a given time frame",
+              "Analyze system logs to identify the source of excessive requests",
+              "Optimize system performance to handle increased traffic and reduce the likelihood of error 429"
+            ],
+            "summary": "The user is experiencing error 429, indicating too many requests. This error occurs when the system receives an excessive number of requests within a short time frame. The issue needs to be addressed to prevent further disruptions.",
+            "title": "Error 429: Excessive Requests"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 14,
+      "user_input": "My API key stopped working suddenly",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3130.87,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User's API key has stopped working unexpectedly",
+            "generated_at": "2026-05-07T10:16:08.553995",
+            "intent": "technical_support",
+            "priority": "high",
+            "sentiment": "negative",
+            "suggested_action": "Investigate the API key issue and potentially reset or reissue the key to resolve the problem"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3243.52,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:16:11.899271",
+            "recommendations": [
+              {
+                "action_type": "troubleshoot",
+                "description": "Check API key expiration and usage limits",
+                "priority": "high"
+              },
+              {
+                "action_type": "educate",
+                "description": "Review API key documentation and usage guidelines",
+                "priority": "medium"
+              },
+              {
+                "action_type": "escalate",
+                "description": "Contact API support team for assistance",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3484.12,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:16:15.483995",
+            "key_items": [
+              "API key was previously working correctly",
+              "No recent changes were made to the system or code",
+              "Error messages or logs are not provided"
+            ],
+            "overview": "The user reported that their API key stopped working without warning, causing disruption to their application or service. The API key was previously functional, and no changes were made to the system or code. The sudden failure suggests a potential issue with the API key itself, the API service, or the user's system configuration.",
+            "recommendations": [
+              "Verify API key credentials and configuration",
+              "Check API service status for outages or maintenance",
+              "Contact API support team for assistance and troubleshooting"
+            ],
+            "summary": "The user's API key stopped working suddenly. The cause is unknown and requires investigation. Assistance is needed to resolve the issue.",
+            "title": "API Key Issue Report"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 15,
+      "user_input": "Server error when trying to export data",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3381.4,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User is experiencing a server error while attempting to export data",
+            "generated_at": "2026-05-07T10:16:18.965860",
+            "intent": "technical_support",
+            "priority": "high",
+            "sentiment": "negative",
+            "suggested_action": "Investigate the server issue and provide troubleshooting steps or contact information for further assistance"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3178.12,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:16:22.245320",
+            "recommendations": [
+              {
+                "action_type": "troubleshoot",
+                "description": "Check server logs for error details",
+                "priority": "high"
+              },
+              {
+                "action_type": "educate",
+                "description": "Review data export guidelines",
+                "priority": "medium"
+              },
+              {
+                "action_type": "escalate",
+                "description": "Contact support team for assistance",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3704.01,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:16:26.049723",
+            "key_items": [
+              "Server error occurs during data export",
+              "Unknown root cause of the server error",
+              "Potential issue with server configuration or software compatibility"
+            ],
+            "overview": "The user has encountered a server error while trying to export data, indicating a potential issue with the server or the export process. The error may be related to server configuration, data volume, or software compatibility. Further investigation is needed to determine the root cause.",
+            "recommendations": [
+              "Check server logs for error details and potential causes",
+              "Verify server configuration and compatibility with the export process",
+              "Contact technical support for further assistance and troubleshooting"
+            ],
+            "summary": "The user is experiencing a server error when attempting to export data. This issue is preventing the user from accessing their data. Assistance is required to resolve the issue.",
+            "title": "Server Error on Data Export"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 16,
+      "user_input": "I want to delete all my data from your system",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3157.28,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User requests deletion of their data from the system",
+            "generated_at": "2026-05-07T10:16:29.308666",
+            "intent": "technical_support",
+            "priority": "high",
+            "sentiment": "neutral",
+            "suggested_action": "Provide the user with instructions on how to submit a data deletion request or initiate the process directly."
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3185.54,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:16:32.593807",
+            "recommendations": [
+              {
+                "action_type": "escalate",
+                "description": "Contact support for data deletion",
+                "priority": "high"
+              },
+              {
+                "action_type": "educate",
+                "description": "Review data deletion policy",
+                "priority": "medium"
+              },
+              {
+                "action_type": "document",
+                "description": "Confirm deletion request in writing",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3477.33,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:16:36.166543",
+            "key_items": [
+              "User has requested complete data deletion",
+              "Conversation history indicates no prior issues or concerns",
+              "Data protection policies will be followed"
+            ],
+            "overview": "The user has submitted a request to delete all their data from the system. This request is being processed in accordance with data protection policies. The conversation history has been reviewed to ensure no ongoing issues or concerns are present.",
+            "recommendations": [
+              "Initiate data deletion process immediately",
+              "Verify completion of deletion and confirm with user",
+              "Review data protection policies to ensure compliance"
+            ],
+            "summary": "User requests data deletion from system. Review of conversation history indicates no prior issues. Deletion process will be initiated.",
+            "title": "Data Deletion Request"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 17,
+      "user_input": "How can I export my personal data?",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3052.59,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User is inquiring about exporting their personal data",
+            "generated_at": "2026-05-07T10:16:39.332964",
+            "intent": "technical_support",
+            "priority": "medium",
+            "sentiment": "neutral",
+            "suggested_action": "Provide the user with instructions on how to export their personal data through the platform's settings or account management section"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3180.69,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:16:42.616401",
+            "recommendations": [
+              {
+                "action_type": "educate",
+                "description": "Check account settings for export options",
+                "priority": "high"
+              },
+              {
+                "action_type": "document",
+                "description": "Review data export policy and guidelines",
+                "priority": "medium"
+              },
+              {
+                "action_type": "troubleshoot",
+                "description": "Contact support for export issues or errors",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3795.54,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:16:46.512759",
+            "key_items": [
+              "Identify the type of data to be exported",
+              "Choose a suitable data export format",
+              "Verify platform-specific export options"
+            ],
+            "overview": "The user's query pertains to exporting personal data, which involves gathering and transferring information in a secure manner. This process requires attention to data protection regulations and platform-specific guidelines. The goal is to provide a clear, step-by-step approach to exporting data while ensuring user privacy.",
+            "recommendations": [
+              "Review the platform's data export policy and procedures",
+              "Use secure data transfer methods to protect sensitive information",
+              "Test the exported data for completeness and accuracy"
+            ],
+            "summary": "The user requests to export personal data. This report outlines the process and key considerations. Data protection is a priority.",
+            "title": "Data Export Report"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 18,
+      "user_input": "Requesting complete account deletion under GDPR",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3494.52,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User is requesting deletion of their account under GDPR regulations",
+            "generated_at": "2026-05-07T10:16:50.099530",
+            "intent": "technical_support",
+            "priority": "high",
+            "sentiment": "neutral",
+            "suggested_action": "Forward the request to the data protection team for immediate processing and confirmation of account deletion"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 16150.16,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:17:06.309939",
+            "recommendations": [
+              {
+                "action_type": "escalate",
+                "description": "Forward to GDPR team",
+                "priority": "high"
+              },
+              {
+                "action_type": "document",
+                "description": "Record deletion request",
+                "priority": "medium"
+              },
+              {
+                "action_type": "educate",
+                "description": "Explain deletion process",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 11686.21,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:17:18.187613",
+            "key_items": [
+              "User has requested complete account deletion under GDPR",
+              "Deletion process requires removal of all personal data and associated information",
+              "Compliance with GDPR regulations is mandatory"
+            ],
+            "overview": "The user has submitted a request for complete account deletion, citing GDPR regulations. This request necessitates a thorough review of user data and prompt action to ensure compliance with relevant laws and regulations. The account deletion process will involve removing all personal data and associated information.",
+            "recommendations": [
+              "Initiate account deletion process immediately",
+              "Verify user identity to ensure legitimate request",
+              "Notify user of deletion completion and provide confirmation"
+            ],
+            "summary": "User requests complete account deletion under GDPR. The request requires immediate attention to ensure compliance. Deletion process will be initiated promptly.",
+            "title": "GDPR Account Deletion Request"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 19,
+      "user_input": "Need my data exported in JSON format",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 21126.16,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User requests data export in JSON format",
+            "generated_at": "2026-05-07T10:17:39.455081",
+            "intent": "technical_support",
+            "priority": "medium",
+            "sentiment": "neutral",
+            "suggested_action": "Provide instructions on how to export data in JSON format or offer to perform the export"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3202.61,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:17:42.758820",
+            "recommendations": [
+              {
+                "action_type": "document",
+                "description": "Export data in JSON format",
+                "priority": "high"
+              },
+              {
+                "action_type": "educate",
+                "description": "Provide JSON export instructions",
+                "priority": "medium"
+              },
+              {
+                "action_type": "troubleshoot",
+                "description": "Check export settings and permissions",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3670.83,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:17:46.530670",
+            "key_items": [
+              "User data collection and filtering",
+              "JSON format conversion and validation",
+              "Data security and encryption measures"
+            ],
+            "overview": "The user has requested to export their data in JSON format. This involves gathering the relevant data, converting it into JSON format, and providing it to the user. The export process should be efficient and secure to ensure the user receives their data accurately and promptly.",
+            "recommendations": [
+              "Use a secure data export tool to gather and convert the user's data",
+              "Validate the JSON format to ensure it meets the user's requirements",
+              "Implement encryption measures to protect the user's data during the export process"
+            ],
+            "summary": "The user requires their data to be exported in JSON format. This report outlines the key points and recommendations for the export process. The goal is to provide the user with their data in the requested format.",
+            "title": "Data Export Report"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 20,
+      "user_input": "Delete my account and all associated data",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3511.75,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User requests account deletion and removal of associated data",
+            "generated_at": "2026-05-07T10:17:50.142825",
+            "intent": "technical_support",
+            "priority": "high",
+            "sentiment": "negative",
+            "suggested_action": "Initiate account deletion process and confirm with user to ensure all data is removed"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3643.2,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:17:53.889381",
+            "recommendations": [
+              {
+                "action_type": "escalate",
+                "description": "Transfer to account deletion team",
+                "priority": "high"
+              },
+              {
+                "action_type": "educate",
+                "description": "Explain data deletion process",
+                "priority": "medium"
+              },
+              {
+                "action_type": "document",
+                "description": "Record account deletion request",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3997.65,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:17:57.988191",
+            "key_items": [
+              "User account deletion requested",
+              "Associated data removal required",
+              "Permanent removal of user information"
+            ],
+            "overview": "The user has initiated a request to delete their account and associated data. This action will result in the permanent removal of user information and account access. The request is being processed in accordance with standard procedures.",
+            "recommendations": [
+              "Verify user identity to confirm deletion request",
+              "Remove all associated data and account information",
+              "Send confirmation notification to user upon completion"
+            ],
+            "summary": "User requests account deletion and data removal. This report outlines the situation and provides recommendations.",
+            "title": "Account Deletion Request"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 21,
+      "user_input": "I see suspicious login from unknown device",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 4590.6,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User reports a suspicious login from an unknown device",
+            "generated_at": "2026-05-07T10:18:02.681475",
+            "intent": "technical_support",
+            "priority": "high",
+            "sentiment": "negative",
+            "suggested_action": "Investigate the login activity and consider resetting the user's password or enabling two-factor authentication"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3519.69,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:18:06.301806",
+            "recommendations": [
+              {
+                "action_type": "escalate",
+                "description": "Report to security team immediately",
+                "priority": "high"
+              },
+              {
+                "action_type": "troubleshoot",
+                "description": "Check account activity and login history",
+                "priority": "medium"
+              },
+              {
+                "action_type": "educate",
+                "description": "Update password and enable 2FA",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 4083.7,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:18:10.486532",
+            "key_items": [
+              "Unknown device used for login",
+              "Location of the device is currently unknown",
+              "Login timestamp and other relevant details are being reviewed"
+            ],
+            "overview": "The suspicious login was identified through our system's monitoring and alerting capabilities. The unknown device's location and other relevant details are being analyzed to determine the nature of the threat. The account's security and integrity are the top priority in this situation.",
+            "recommendations": [
+              "Change the account password immediately",
+              "Enable two-factor authentication for added security",
+              "Monitor account activity closely for any further suspicious behavior"
+            ],
+            "summary": "A suspicious login from an unknown device has been detected. This may indicate a potential security threat. Immediate action is recommended to secure the account.",
+            "title": "Suspicious Login Activity"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 22,
+      "user_input": "Someone accessed my account without permission",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3655.41,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User reports unauthorized access to their account",
+            "generated_at": "2026-05-07T10:18:14.242945",
+            "intent": "complaint",
+            "priority": "high",
+            "sentiment": "negative",
+            "suggested_action": "Investigate the incident and guide the user through the account security recovery process"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3331.59,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:18:17.674485",
+            "recommendations": [
+              {
+                "action_type": "escalate",
+                "description": "Report incident to support team",
+                "priority": "high"
+              },
+              {
+                "action_type": "troubleshoot",
+                "description": "Change password and enable 2FA",
+                "priority": "medium"
+              },
+              {
+                "action_type": "educate",
+                "description": "Review account security settings",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3997.16,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:18:21.771229",
+            "key_items": [
+              "Unauthorized account access detected by the user",
+              "Potential security vulnerabilities in account login or password",
+              "Possible data breach or exposure of sensitive information"
+            ],
+            "overview": "The user reported an incident of unauthorized account access, which may have resulted from phishing, password compromise, or other security weaknesses. The incident may have exposed sensitive information and compromised account security. A thorough investigation and prompt response are necessary to prevent further unauthorized access.",
+            "recommendations": [
+              "Change the account password immediately to prevent further unauthorized access",
+              "Enable two-factor authentication to add an extra layer of security",
+              "Monitor account activity and report any suspicious transactions or behavior"
+            ],
+            "summary": "A security incident has occurred where an unauthorized individual accessed the user's account without permission. The user is concerned about potential data breaches and security vulnerabilities. Immediate action is required to mitigate the issue.",
+            "title": "Unauthorized Account Access"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 23,
+      "user_input": "How to enable two-factor authentication?",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3525.64,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User is asking about enabling two-factor authentication",
+            "generated_at": "2026-05-07T10:18:25.403463",
+            "intent": "technical_support",
+            "priority": "medium",
+            "sentiment": "neutral",
+            "suggested_action": "Provide the user with step-by-step instructions on how to enable two-factor authentication for their account"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3698.86,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:18:29.203147",
+            "recommendations": [
+              {
+                "action_type": "educate",
+                "description": "Go to account settings to enable 2FA",
+                "priority": "high"
+              },
+              {
+                "action_type": "troubleshoot",
+                "description": "Check phone or authenticator app for codes",
+                "priority": "medium"
+              },
+              {
+                "action_type": "document",
+                "description": "Review 2FA setup guide for detailed steps",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 4213.52,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:18:33.517388",
+            "key_items": [
+              "Understanding the types of two-factor authentication methods available",
+              "Identifying the specific method to be implemented based on user needs",
+              "Recognizing the importance of two-factor authentication in preventing cyber attacks"
+            ],
+            "overview": "Two-factor authentication is a security process that requires a user to provide two different authentication factors to access an account or system. This can include something the user knows, has, or is. Common methods include SMS codes, authenticator apps, and biometric data. Enabling two-factor authentication significantly reduces the risk of unauthorized access.",
+            "recommendations": [
+              "Choose a two-factor authentication method that aligns with the user's device and accessibility",
+              "Follow the specific setup instructions for the chosen method, such as downloading an authenticator app or setting up SMS notifications",
+              "Test the two-factor authentication setup to ensure it is working correctly and does not interfere with normal account access"
+            ],
+            "summary": "The user is seeking to enable two-factor authentication for enhanced security. This process adds an extra layer of protection to the login process. Implementation is crucial for safeguarding accounts.",
+            "title": "Two-Factor Authentication Setup"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 24,
+      "user_input": "Getting alerts about suspicious activity",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3504.2,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User is receiving alerts about suspicious activity, likely related to account security",
+            "generated_at": "2026-05-07T10:18:37.122441",
+            "intent": "technical_support",
+            "priority": "high",
+            "sentiment": "negative",
+            "suggested_action": "Investigate the suspicious activity and provide guidance on securing the account"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3749.39,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:18:40.973047",
+            "recommendations": [
+              {
+                "action_type": "escalate",
+                "description": "Report to security team",
+                "priority": "high"
+              },
+              {
+                "action_type": "troubleshoot",
+                "description": "Check account settings",
+                "priority": "medium"
+              },
+              {
+                "action_type": "educate",
+                "description": "Review security guidelines",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3772.15,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:18:44.846405",
+            "key_items": [
+              "Unusual login attempts from unknown locations",
+              "Access to sensitive data without authorization",
+              "System configuration changes without approval"
+            ],
+            "overview": "The alerts are triggered by automated monitoring systems designed to identify potential security threats. The suspicious activity may be related to login attempts, data access, or system changes. Further analysis is needed to understand the nature of the activity and take corrective action.",
+            "recommendations": [
+              "Conduct a thorough investigation of the suspicious activity",
+              "Verify user identities and access permissions",
+              "Implement additional security measures to prevent future incidents"
+            ],
+            "summary": "The system has detected unusual activity prompting alerts. Investigation is required to determine the cause and impact. Immediate attention is necessary to prevent potential security breaches.",
+            "title": "Suspicious Activity Alerts"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 25,
+      "user_input": "Need to secure my account immediately",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3427.73,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User needs to secure their account immediately",
+            "generated_at": "2026-05-07T10:18:48.378498",
+            "intent": "technical_support",
+            "priority": "high",
+            "sentiment": "neutral",
+            "suggested_action": "Direct the user to change their password and enable two-factor authentication to secure their account"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3880.59,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:18:52.360195",
+            "recommendations": [
+              {
+                "action_type": "escalate",
+                "description": "Contact support to lock account",
+                "priority": "high"
+              },
+              {
+                "action_type": "troubleshoot",
+                "description": "Change password immediately",
+                "priority": "high"
+              },
+              {
+                "action_type": "educate",
+                "description": "Enable two-factor authentication",
+                "priority": "medium"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 4170.95,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:18:56.631515",
+            "key_items": [
+              "Unverified account activity",
+              "Weak password or authentication method",
+              "Outdated account settings or permissions"
+            ],
+            "overview": "The user has expressed concern about their account security, prompting a review of potential vulnerabilities and threats. This report aims to identify key issues and provide recommendations to enhance account security and protect against unauthorized access.",
+            "recommendations": [
+              "Enable two-factor authentication to add an extra layer of security",
+              "Update account password to a strong, unique phrase",
+              "Review and update account settings and permissions to ensure they are current and secure"
+            ],
+            "summary": "The user requires immediate assistance to secure their account. The situation necessitates prompt action to prevent potential security breaches. A comprehensive review is needed to ensure account integrity.",
+            "title": "Account Security Report"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 26,
+      "user_input": "What are your business hours?",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3639.53,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User is inquiring about the operating hours of the business",
+            "generated_at": "2026-05-07T10:19:00.372650",
+            "intent": "general_query",
+            "priority": "medium",
+            "sentiment": "neutral",
+            "suggested_action": "Provide the business hours of operation in response to the user's query"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3979.04,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:19:04.451738",
+            "recommendations": [
+              {
+                "action_type": "educate",
+                "description": "Provide business hours info",
+                "priority": "high"
+              },
+              {
+                "action_type": "document",
+                "description": "Update hours on website",
+                "priority": "medium"
+              },
+              {
+                "action_type": "follow_up",
+                "description": "Confirm hours with user",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 4394.01,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:19:08.951488",
+            "key_items": [
+              "Monday to Friday: 9am to 5pm",
+              "Weekends: Closed",
+              "Holidays: Closed"
+            ],
+            "overview": "The user's query is related to our operational schedule, which is crucial for planning and coordination. Our business hours are designed to accommodate a wide range of customers and clients. We strive to provide excellent service during these hours.",
+            "recommendations": [
+              "Please plan your visits or calls according to our business hours",
+              "For urgent matters outside business hours, consider contacting our emergency support",
+              "Check our website for any updates or changes to our business hours"
+            ],
+            "summary": "The user inquired about business hours. Our standard hours are Monday to Friday, 9am to 5pm. We are closed on weekends and holidays.",
+            "title": "Business Hours Inquiry"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 27,
+      "user_input": "How do I contact sales team?",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3860.17,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User is seeking contact information for the sales team",
+            "generated_at": "2026-05-07T10:19:12.912998",
+            "intent": "general_query",
+            "priority": "medium",
+            "sentiment": "neutral",
+            "suggested_action": "Provide the user with the sales team's contact information, such as email or phone number."
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3924.62,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:19:16.936801",
+            "recommendations": [
+              {
+                "action_type": "escalate",
+                "description": "Submit sales inquiry form",
+                "priority": "high"
+              },
+              {
+                "action_type": "educate",
+                "description": "Check website for sales contact info",
+                "priority": "medium"
+              },
+              {
+                "action_type": "document",
+                "description": "Review FAQ for sales team details",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 4098.77,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:19:21.137257",
+            "key_items": [
+              "User is seeking sales team contact information",
+              "Sales team contact details are not readily available",
+              "User requires prompt assistance with inquiry"
+            ],
+            "overview": "The user has initiated a conversation to establish contact with the sales team, likely to inquire about products or services. The user may be seeking information on pricing, features, or availability. The sales team's contact information is not readily available to the user.",
+            "recommendations": [
+              "Provide the sales team's email address or phone number",
+              "Offer a contact form or chat service for user convenience",
+              "Direct the user to the company website for sales team contact information"
+            ],
+            "summary": "User is seeking to contact the sales team. The user requires assistance with reaching out to the sales department. A prompt response is necessary to address the user's inquiry.",
+            "title": "Sales Team Contact Report"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 28,
+      "user_input": "Need help setting up my first integration",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3492.35,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User needs assistance with setting up their first integration",
+            "generated_at": "2026-05-07T10:19:24.732432",
+            "intent": "technical_support",
+            "priority": "medium",
+            "sentiment": "neutral",
+            "suggested_action": "Provide the user with step-by-step integration setup instructions or offer guided support"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3679.85,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:19:28.512738",
+            "recommendations": [
+              {
+                "action_type": "educate",
+                "description": "Review integration guide",
+                "priority": "high"
+              },
+              {
+                "action_type": "troubleshoot",
+                "description": "Check API credentials",
+                "priority": "medium"
+              },
+              {
+                "action_type": "document",
+                "description": "Log integration steps",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 3992.09,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:19:32.604598",
+            "key_items": [
+              "The user is setting up their first integration",
+              "No specific integration type or platform has been mentioned",
+              "The user requires step-by-step guidance and support"
+            ],
+            "overview": "The user is seeking support for setting up an integration, which is a common requirement for many applications and services. To provide effective assistance, it is essential to understand the user's specific needs and the type of integration they are trying to set up. The conversation will focus on gathering more information and providing guidance on the integration process.",
+            "recommendations": [
+              "Gather more information about the user's specific integration requirements",
+              "Provide the user with a list of supported integration options and their documentation",
+              "Offer to walk the user through the integration setup process with detailed instructions"
+            ],
+            "summary": "The user requires help with setting up their first integration. The conversation has just begun, and no specific details have been provided. Assistance will be offered to guide the user through the process.",
+            "title": "Integration Setup Assistance"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 29,
+      "user_input": "Documentation link for API reference?",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3574.29,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User is requesting a documentation link for API reference",
+            "generated_at": "2026-05-07T10:19:36.291522",
+            "intent": "technical_support",
+            "priority": "medium",
+            "sentiment": "neutral",
+            "suggested_action": "Provide the user with the official API documentation link or guide"
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3668.59,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:19:40.060806",
+            "recommendations": [
+              {
+                "action_type": "document",
+                "description": "Provide API reference link",
+                "priority": "high"
+              },
+              {
+                "action_type": "educate",
+                "description": "Explain API usage basics",
+                "priority": "medium"
+              },
+              {
+                "action_type": "follow_up",
+                "description": "Check user understanding",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 4121.41,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:19:44.282118",
+            "key_items": [
+              "The user requires a documentation link for API reference",
+              "API reference documentation is essential for development and integration",
+              "Accurate and up-to-date documentation is crucial for successful API implementation"
+            ],
+            "overview": "The user's query indicates a need for API reference documentation, which is a crucial resource for developers and integrators. Providing accurate and up-to-date documentation is essential for successful API implementation and troubleshooting. The API reference documentation should include detailed information on API endpoints, parameters, and response formats.",
+            "recommendations": [
+              "Provide a direct link to the API reference documentation",
+              "Ensure the documentation is accurate, up-to-date, and easily accessible",
+              "Consider providing additional resources, such as code samples and tutorials, to support API implementation"
+            ],
+            "summary": "The user is seeking the documentation link for API reference. This report provides an overview and recommendations to address the query. The goal is to provide a helpful and accurate response.",
+            "title": "API Reference Documentation"
+          }
+        }
+      }
+    },
+    {
+      "record_id": 30,
+      "user_input": "Do you offer enterprise pricing?",
+      "responses": {
+        "describe": {
+          "success": true,
+          "duration_ms": 3576.38,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "description": "User is inquiring about pricing options for enterprise-level services",
+            "generated_at": "2026-05-07T10:19:47.965402",
+            "intent": "general_query",
+            "priority": "medium",
+            "sentiment": "neutral",
+            "suggested_action": "Provide the user with information on available enterprise pricing plans and offers."
+          }
+        },
+        "recommend": {
+          "success": true,
+          "duration_ms": 3535.39,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:19:51.601069",
+            "recommendations": [
+              {
+                "action_type": "educate",
+                "description": "Provide enterprise pricing details",
+                "priority": "high"
+              },
+              {
+                "action_type": "document",
+                "description": "Share pricing brochure or guide",
+                "priority": "medium"
+              },
+              {
+                "action_type": "follow_up",
+                "description": "Schedule call to discuss custom pricing",
+                "priority": "low"
+              }
+            ]
+          }
+        },
+        "generate-report": {
+          "success": true,
+          "duration_ms": 4004.34,
+          "is_fallback": false,
+          "status_code": 200,
+          "error": null,
+          "data": {
+            "generated_at": "2026-05-07T10:19:55.707294",
+            "key_items": [
+              "The user is seeking enterprise pricing information",
+              "Customized pricing plans are typically required for large organizations",
+              "Understanding the user's specific needs is crucial for an accurate response"
+            ],
+            "overview": "The user's query indicates they are likely a business or organization with specific needs that may not be met by standard pricing plans. Enterprise pricing typically involves tailored packages and discounts for large-scale users. Understanding their requirements is essential to provide an accurate response.",
+            "recommendations": [
+              "Provide the user with information on available enterprise pricing options",
+              "Offer to discuss their specific needs and requirements in more detail",
+              "Direct the user to a relevant contact or webpage for further information"
+            ],
+            "summary": "The user is inquiring about enterprise pricing options. This suggests they are a large organization seeking customized pricing. A response is needed to address their query.",
+            "title": "Enterprise Pricing Inquiry"
+          }
+        }
+      }
+    }
+  ]
+}
