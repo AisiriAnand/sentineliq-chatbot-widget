@@ -72,8 +72,9 @@ def check_content_type():
     """Validate Content-Type for POST requests"""
     if request.method == 'POST':
         content_type = request.content_type or ''
-        if not content_type.startswith('application/json'):
-            return {'error': 'Content-Type must be application/json'}, 415
+        print(f"DEBUG: content_type={content_type}, path={request.path}")
+        # Allow any content type for now to debug
+        pass
 
 
 @app.errorhandler(429)
@@ -85,6 +86,9 @@ def ratelimit_handler(e):
 @app.errorhandler(500)
 def internal_error(e):
     """Handle internal server errors"""
+    print(f"DEBUG: 500 Error - {e}")
+    import traceback
+    traceback.print_exc()
     return {'error': 'Internal server error'}, 500
 
 

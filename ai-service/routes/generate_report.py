@@ -42,8 +42,25 @@ def generate_report():
 
     # Parse JSON response
     try:
+        # Strip markdown code blocks if present
+        response = response.strip()
+        if response.startswith('```json'):
+            response = response[7:].strip()
+        elif response.startswith('```'):
+            response = response[3:].strip()
+        if response.endswith('```'):
+            response = response[:-3].strip()
+        
+        # Strip double braces (Groq sometimes returns {{ instead of {)
+        if response.startswith('{{'):
+            response = response[1:]
+        if response.endswith('}}'):
+            response = response[:-1]
+        
         report = json.loads(response)
-    except json.JSONDecodeError:
+    except json.JSONDecodeError as e:
+        print(f"JSON parse error in generate_report: {e}")
+        print(f"Response was: {response[:200]}")
         return jsonify({'error': 'Invalid JSON response from AI'}), 500
 
     # Check if fallback response

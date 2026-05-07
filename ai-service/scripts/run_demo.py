@@ -152,12 +152,12 @@ def run_demo():
         "summary": {
             "describe": {"success": 0, "failed": 0, "fallback": 0},
             "recommend": {"success": 0, "failed": 0, "fallback": 0},
-            "generate_report": {"success": 0, "failed": 0, "fallback": 0}
+            "generate-report": {"success": 0, "failed": 0, "fallback": 0}
         },
         "records": []
     }
     
-    endpoints = ["describe", "recommend", "generate_report"]
+    endpoints = ["describe", "recommend", "generate-report"]
     
     for i, user_input in enumerate(DEMO_RECORDS, 1):
         print(f"\n[{i}/{len(DEMO_RECORDS)}] Testing: '{user_input[:50]}...'")

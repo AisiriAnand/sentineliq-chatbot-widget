@@ -77,6 +77,21 @@ class GroqClient:
             )
             result = response.choices[0].message.content
             
+            # Strip markdown code blocks if present
+            result = result.strip()
+            if result.startswith('```json'):
+                result = result[7:].strip()
+            elif result.startswith('```'):
+                result = result[3:].strip()
+            if result.endswith('```'):
+                result = result[:-3].strip()
+            
+            # Strip double braces (Groq sometimes returns {{ instead of {)
+            if result.startswith('{{'):
+                result = result[1:]
+            if result.endswith('}}'):
+                result = result[:-1]
+            
             # Record response time
             duration_ms = (time.time() - start_time) * 1000
             if self.cache_service:
